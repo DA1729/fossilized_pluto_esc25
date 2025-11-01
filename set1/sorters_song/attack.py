@@ -6,7 +6,8 @@ import time
 SCOPETYPE = 'CWNANO'
 PLATFORM = 'CWNANO'
 SS_VER = 'SS_VER_1_1'
-FIRMWARE = '../../../challenges/set1/sortersSong-CWNANO.hex'
+#FIRMWARE = '../../../challenges/set1/sortersSong-CWNANO.hex'
+FIRMWARE = 'sortersSong-CWNANO.hex'
 SAMPLE_SIZE = 700
 ARRAY_LENGTH = 15
 
