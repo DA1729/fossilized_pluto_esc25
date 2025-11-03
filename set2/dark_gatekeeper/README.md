@@ -12,7 +12,6 @@ Byte-by-byte password comparison with different execution paths for correct vs i
 4. Use statistical methods (Difference from Mean, Sum of Absolute Differences) to identify outlier
 5. Recover all 12 bytes sequentially
 
-**Attack Complexity**: 256 attempts × 12 bytes = 3,072 queries (vs 256^12 ≈ 2^96 for brute force)
 
 ## Flag
 
