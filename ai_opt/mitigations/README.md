@@ -55,6 +55,6 @@ mitigations/
 
 ## Notes
 
-- All 8 challenges achieve 0% attack success after mitigation
+- All 8 challenges achieve 0% attack success after mitigation (atleast within the Chipwhisperer Nano's scope)
 - Models trained on specific hardware (may need retraining for different devices)
 - LLM patches provide defense-in-depth with multiple countermeasure layers
