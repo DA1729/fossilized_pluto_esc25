@@ -24,7 +24,6 @@ Timing oracle enables binary search recovery (16 queries per 16-bit value vs 65,
 
 3. **Flag Retrieval**: Sort recovered array and send to retrieve flag
 
-**Efficiency**: ~270,000 total traces for 15 values (~18,000 per value)
 
 ## Flag
 
@@ -37,3 +36,4 @@ Timing oracle enables binary search recovery (16 queries per 16-bit value vs 65,
 - Random delays to mask execution paths
 - Shuffling and blinding techniques
 - Hardware countermeasures (dual-rail logic, randomized clocking)
+
