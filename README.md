@@ -1,9 +1,9 @@
 # ESC 2025 Finals - Hardware Security Challenges
 
 This repo contains my solutions, relevant code and documentation for my final round submission to **CSAW Embedded Security Challenge, 2025**. 
-- Team name: **FossilizedPluto**
-- Member: Daksh Pandey
-- College: IIT Roorkee
+- **Team name**: FossilizedPluto
+- **Member**: Daksh Pandey
+- **College**: IIT Roorkee
 
 ## Repository Structure
 
