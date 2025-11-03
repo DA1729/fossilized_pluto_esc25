@@ -107,12 +107,9 @@ print(f"training set: {x_train.shape}")
 print(f"test set: {x_test.shape}")
 
 print("training random forest classifier...")
-train_start = time.time()
 clf = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42, n_jobs=-1)
 clf.fit(x_train, y_train)
-train_end = time.time()
 
-print(f"training time: {train_end - train_start:.2f}s")
 
 y_pred = clf.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)

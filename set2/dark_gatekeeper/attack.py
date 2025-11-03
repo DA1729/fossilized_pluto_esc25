@@ -68,7 +68,6 @@ def attack_byte_position(known_bytes, position):
     best_guess = guess_values[top_indices[0]]
     return best_guess
 
-attack_start = time.time()
 recovered_password = []
 
 for byte_pos in range(key_length):
@@ -85,9 +84,6 @@ if response:
     if "access denied" not in result_str.lower():
         print(f'flag: {result_str}')
 
-attack_end = time.time()
-total_time = attack_end - attack_start
-print(f'time: {total_time:.2f}s')
 total_queries = 256 * key_length
 print(f'queries: {total_queries}')
 

@@ -115,16 +115,13 @@ scaler = StandardScaler()
 x_scaled = scaler.fit_transform(x)
 
 print("training isolation forest...")
-train_start = time.time()
 detector = IsolationForest(
     contamination=0.1,
     random_state=42,
     n_estimators=100
 )
 detector.fit(x_scaled[y == 0])
-train_end = time.time()
 
-print(f"training time: {train_end - train_start:.2f}s")
 
 predictions = detector.predict(x_scaled)
 predictions = (predictions == -1).astype(int)

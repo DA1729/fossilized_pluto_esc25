@@ -83,13 +83,10 @@ for byte_idx in range(12):
         x_repeated, y_array, test_size=0.2, random_state=42
     )
 
-    train_start = time.time()
     model = GradientBoostingRegressor(n_estimators=50, max_depth=5, random_state=42)
     model.fit(x_train, y_train)
-    train_end = time.time()
 
     score = model.score(x_test, y_test)
-    print(f"byte {byte_idx} - r2 score: {score:.4f}, time: {train_end - train_start:.2f}s")
 
     models.append(model)
 

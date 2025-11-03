@@ -106,12 +106,8 @@ def adaptive_glitch_scan():
         return found_params
     return None
 
-attack_start = time.time()
 flag_params = adaptive_glitch_scan()
-attack_end = time.time()
 
-total_time = attack_end - attack_start
-print(f'time: {total_time:.2f}s')
 if flag_params:
     print(f'params: repeat={flag_params[0]}, ext_offset={flag_params[1]}')
 

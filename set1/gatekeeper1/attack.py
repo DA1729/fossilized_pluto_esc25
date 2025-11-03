@@ -43,16 +43,12 @@ def guess_character(target, current_password, position):
     return best_char
 
 def main():
-    attack_start = time.time()
     scope, target = setup()
     found_password = ""
     for pos in range(0, pwd_len):
         next_char = guess_character(target, found_password, pos)
         found_password += next_char
-    attack_end = time.time()
-    total_time = attack_end - attack_start
     print(f"password: {found_password}")
-    print(f"time: {total_time:.2f}s")
     total_queries = pwd_len * len(charset) * samples
     print(f"queries: {total_queries}")
 

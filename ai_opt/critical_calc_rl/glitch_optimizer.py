@@ -118,7 +118,6 @@ n_episodes = 200
 best_params = None
 best_flag = None
 
-attack_start = time.time()
 
 for episode in range(n_episodes):
     if episode % 20 == 0:
@@ -152,11 +151,8 @@ for episode in range(n_episodes):
     agent.update(state, reward, next_state)
     agent.decay_epsilon()
 
-attack_end = time.time()
-total_time = attack_end - attack_start
 
 print(f"\nrl optimization complete")
-print(f"time: {total_time:.2f}s")
 print(f"episodes: {episode + 1}")
 
 if best_params:

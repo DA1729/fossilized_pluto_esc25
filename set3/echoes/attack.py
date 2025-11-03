@@ -177,7 +177,6 @@ def recover_byte(pos, config):
             break
     return secret_val
 
-attack_start = time.time()
 
 recovered_array = []
 
@@ -208,9 +207,6 @@ if resp:
     except UnicodeDecodeError:
         print(f'raw: {resp}')
 
-attack_end = time.time()
-total_time = attack_end - attack_start
-print(f'time: {total_time:.2f}s')
 total_queries = 15 * (n_analysis * 2 + 16 * n_analysis)
 print(f'queries: {total_queries}')
 

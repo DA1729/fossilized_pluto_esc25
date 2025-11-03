@@ -35,7 +35,6 @@ def capture_trace_with_mask(mask_value):
     _ = target.simpleserial_read('r', 1, timeout=100)
     return scope.get_last_trace()
 
-attack_start = time.time()
 
 traces = []
 for mask in range(256):
@@ -100,9 +99,6 @@ if resp:
     if "FailureToLaunch" not in result:
         print(f'flag: {result}')
 
-attack_end = time.time()
-total_time = attack_end - attack_start
-print(f'time: {total_time:.2f}s')
 total_queries = 256
 print(f'queries: {total_queries}')
 

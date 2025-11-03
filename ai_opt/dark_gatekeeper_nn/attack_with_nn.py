@@ -61,7 +61,6 @@ def predict_byte_nn(known_bytes, position, n_predictions=5):
     top_candidates = np.argsort(avg_probs)[::-1][:5]
     return top_candidates
 
-attack_start = time.time()
 recovered_password = []
 
 for byte_pos in range(key_length):
@@ -80,9 +79,6 @@ if response:
     if "access denied" not in result_str.lower():
         print(f"flag: {result_str}")
 
-attack_end = time.time()
-total_time = attack_end - attack_start
-print(f"time: {total_time:.2f}s")
 total_queries = key_length * 5
 print(f"queries: {total_queries}")
 

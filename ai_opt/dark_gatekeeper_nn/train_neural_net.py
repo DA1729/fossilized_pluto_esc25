@@ -87,15 +87,12 @@ model.compile(optimizer='adam',
               metrics=['accuracy'])
 
 print("training neural network...")
-train_start = time.time()
 history = model.fit(x_train, y_train,
                     epochs=50,
                     batch_size=32,
                     validation_split=0.2,
                     verbose=0)
-train_end = time.time()
 
-print(f"training time: {train_end - train_start:.2f}s")
 
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0)
 print(f"test accuracy: {test_acc*100:.2f}%")

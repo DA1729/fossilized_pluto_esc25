@@ -66,7 +66,6 @@ except Exception as e:
     target.dis()
     sys.exit(1)
 
-attack_start = time.time()
 
 all_traces = np.zeros((n_trace, num_samples), dtype=np.float32)
 all_plaintexts = np.zeros((n_trace, 8), dtype=np.uint8)
@@ -226,9 +225,6 @@ for key_half_1 in tqdm(key_half1_generator, total=256, desc="checking 1st-half k
             break
     if found_flag: break
 
-attack_end = time.time()
-total_time = attack_end - attack_start
-print(f'time: {total_time:.2f}s')
 total_queries = n_trace + 256
 print(f'queries: {total_queries}')
 
