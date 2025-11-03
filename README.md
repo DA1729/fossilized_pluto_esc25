@@ -84,10 +84,10 @@ Real-time attack detection using Isolation Forest classifier:
 
 ## ML Techniques
 
-**Supervised Learning**: Random Forest, DNNs, Gradient Boosting
-**Reinforcement Learning**: Q-learning with epsilon-greedy exploration
-**Anomaly Detection**: Isolation Forest for intrusion detection
-**LLM Assistance**: Automated secure code generation
+- **Supervised Learning**: Random Forest, DNNs, Gradient Boosting
+- **Reinforcement Learning**: Q-learning with epsilon-greedy exploration
+- **Anomaly Detection**: Isolation Forest for intrusion detection
+- **LLM Assistance**: Automated secure code generation
 
 ## Dependencies
 
