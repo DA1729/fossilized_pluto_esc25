@@ -1,6 +1,6 @@
 # ESC 2025 Finals - Hardware Security Challenges
 
-This repo contains my solutions, relevant code and documentation for my submission for **CSAW Embedded Security Challenge, 2025**. 
+This repo contains my solutions, relevant code and documentation for my final round submission to **CSAW Embedded Security Challenge, 2025**. 
 - Team name: **FossilizedPluto**
 - Member: Daksh Pandey
 - College: IIT Roorkee
@@ -22,7 +22,7 @@ fossilized_pluto_esc25/
 
 ### Set 1: Timing, Power, and Fault Attacks
 - **Gatekeeper1/2**: Timing side-channel password recovery (`gk1{l0g1npwn}`, `gk1{l0g1npwn}wlb4`)
-- **Sorters Song**: Power analysis on sorting algorithm (`ss1{y0u_g0t_it_br0!}`, `ss2{!AEGILOPS_chimps}`)
+- **Sorters Song**: Power analysis on sorting algorithm (`ss1{y0u_g0t_it_br0!}`, `ss2{!AEGILOPS_chimps`)
 - **Critical Calculation**: Voltage glitching loop corruption (`cc1{C0RRUPT3D_C4LCUL4T10N}`)
 
 ### Set 2: Cryptographic Power Analysis
