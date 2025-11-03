@@ -82,14 +82,6 @@ python main.py traces.npy challenge_name firmware.hex --no-refine
 export ANTHROPIC_API_KEY='your-key-here'
 ```
 
-## Example Session
-
-See `example_session.md` for complete walkthrough of discovering and exploiting the hyperspace CPA vulnerability, including:
-- Trace analysis output
-- LLM vulnerability identification
-- Generated attack code
-- Iterative refinement process
-- Final flag recovery
 
 ## Requirements
 
@@ -124,27 +116,6 @@ traces.npy → trace_analyzer → LLM → attack_generator → generated_attack.
                           & refinement
 ```
 
-## Benefits
-
-**Speed**: 30-40x faster than manual vulnerability analysis and exploit development
-
-**Automation**: Zero manual intervention after trace collection
-
-**Correctness**: API templates ensure generated code uses proper ChipWhisperer patterns
-
-**Self-Correction**: Iterative refinement fixes common errors automatically
-
-**Discovery**: LLM identifies vulnerability type from statistical signatures alone
-
-## Competition Relevance
-
-Directly addresses ESC 2025 scoring criteria:
-
-- **AI Integration (20%)**: Creative use of LLM for discovery and automation
-- **Performance (20%)**: Dramatic speedup and query reduction through intelligent analysis
-- **Correctness (30%)**: Generates working exploits that recover flags
-- **Quality (30%)**: Well-documented, novel approach with clear results
-
 ## Limitations
 
 - Requires ANTHROPIC_API_KEY environment variable
@@ -152,9 +123,4 @@ Directly addresses ESC 2025 scoring criteria:
 - Complex vulnerabilities may require manual refinement beyond 3 iterations
 - API templates must be updated for new attack types
 
-## Notes
 
-- All code follows snake_case convention
-- Minimal output printing for clean presentation
-- No inline comments (self-documenting code structure)
-- Proper cleanup (scope.dis(), target.dis()) in all generated code
