@@ -14,13 +14,13 @@ Data-dependent power consumption in sorting algorithm comparison operations (`gu
 ## Attack Variants
 
 - **Command 'a' (8-bit)**: Recovers 15 bytes → **ss1{y0u_g0t_it_br0!}**
-- **Command 'b' (16-bit)**: Recovers 15 uint16 values → **ss2{!AEGILOPS_chimps}**
+- **Command 'b' (16-bit)**: Recovers 15 uint16 values → **ss2{!AEGILOPS_chimps**
 
 ## Flags
 
 **ss1{y0u_g0t_it_br0!}**
 
-**ss2{!AEGILOPS_chimps}**
+**ss2{!AEGILOPS_chimps**
 
 ## Mitigation
 
