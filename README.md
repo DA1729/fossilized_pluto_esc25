@@ -1,4 +1,4 @@
-# ESC 2025 Final FossilizedPluto
+# CSAW ESC 2025 Final FossilizedPluto
 
 This repo contains my solutions, relevant code and documentation for my final round submission to **CSAW Embedded Security Challenge, 2025**. 
 - **Team name**: FossilizedPluto
