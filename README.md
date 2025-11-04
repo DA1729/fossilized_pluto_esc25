@@ -1,4 +1,4 @@
-# ESC 2025 Finals - Hardware Security Challenges
+# ESC 2025 Final FossilizedPluto
 
 This repo contains my solutions, relevant code and documentation for my final round submission to **CSAW Embedded Security Challenge, 2025**. 
 - **Team name**: FossilizedPluto
@@ -9,12 +9,14 @@ This repo contains my solutions, relevant code and documentation for my final ro
 
 ```
 fossilized_pluto_esc25/
-├── set1/              # Beginner challenges (timing, power, glitching)
-├── set2/              # Intermediate challenges (DPA, CPA)
-├── set3/              # Advanced challenges (timing oracle, advanced CPA)
+├── solutions/         # Challenge solutions
+│   ├── set1/          # Beginner challenges (timing, power, glitching)
+│   ├── set2/          # Intermediate challenges (DPA, CPA)
+│   └── set3/          # Advanced challenges (timing oracle, advanced CPA)
 ├── challenges/        # Target firmware (C source + HEX binaries)
 ├── reports/           # Qualification and final round reports
 └── ai_opt/            # AI/ML optimizations
+    ├── llm_attack_assistant/  # LLM-powered attack discovery
     ├── attacks/       # ML-enhanced attack implementations
     └── mitigations/   # LLM patches + anomaly detection
 ```
@@ -41,6 +43,17 @@ Each challenge directory contains:
 - `analysis.py` - Signal/trace analysis
 
 ## AI/ML Optimizations
+
+### LLM Attack Assistant (`ai_opt/llm_attack_assistant/`)
+
+Automated vulnerability discovery and attack generation using LLMs (Claude):
+- **trace_analyzer.py** - Analyzes traces and queries LLM for vulnerabilities
+- **attack_generator.py** - Generates ChipWhisperer attack code from analysis
+- **iterative_refiner.py** - Executes and refines code until successful
+- **api_templates.py** - Pre-built templates for correct API usage
+- **main.py** - Complete pipeline orchestration
+
+Key innovation: Discovery from raw traces, not just code generation.
 
 ### Enhanced Attacks (`ai_opt/attacks/`)
 
@@ -93,14 +106,14 @@ Real-time attack detection using Isolation Forest classifier:
 ## Dependencies
 
 ```bash
-pip install chipwhisperer numpy scikit-learn tensorflow matplotlib scipy tqdm
+pip install chipwhisperer numpy scikit-learn tensorflow matplotlib scipy tqdm anthropic
 ```
 
 ## Usage
 
 ### Run Attack
 ```bash
-cd set1/gatekeeper1
+cd solutions/set1/gatekeeper1
 python attack.py
 ```
 
@@ -121,6 +134,13 @@ python attack_with_ml.py
 cd ai_opt/mitigations/anomaly_detector
 python train_detector.py
 python monitor_realtime.py
+```
+
+### LLM Attack Discovery
+```bash
+cd ai_opt/llm_attack_assistant
+export ANTHROPIC_API_KEY='your-key-here'
+python main.py traces.npy challenge_name firmware.hex -o attack.py
 ```
 
 ## Notes
