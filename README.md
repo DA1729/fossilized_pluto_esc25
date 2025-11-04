@@ -13,6 +13,7 @@ fossilized_pluto_esc25/
 ├── set2/              # Intermediate challenges (DPA, CPA)
 ├── set3/              # Advanced challenges (timing oracle, advanced CPA)
 ├── challenges/        # Target firmware (C source + HEX binaries)
+├── reports/           # Qualification and final round reports
 └── ai_opt/            # AI/ML optimizations
     ├── attacks/       # ML-enhanced attack implementations
     └── mitigations/   # LLM patches + anomaly detection
