@@ -49,7 +49,7 @@ def reset_target(scope):
     scope.io.nrst = 'high_z'
     time.sleep(0.05)
 
-fw_path = "../../challenges/set3/chaos-CWNANO.hex"
+fw_path = "chaos-CWNANO.hex"
 cw.program_target(scope, prog, fw_path)
 reset_target(scope)
 
