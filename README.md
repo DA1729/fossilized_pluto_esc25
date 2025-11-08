@@ -3,6 +3,7 @@
 This repo contains my solutions, relevant code and documentation for my final round submission to **CSAW Embedded Security Challenge, 2025**. 
 - **Team name**: FossilizedPluto
 - **Member**: Daksh Pandey
+- **Supervisor**: Dr. Sparsh Mittal
 - **College**: IIT Roorkee
 
 ## Repository Structure
