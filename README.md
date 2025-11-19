@@ -5,6 +5,7 @@ This repo contains my solutions, relevant code and documentation for my final ro
 - **Member**: Daksh Pandey
 - **Supervisor**: Dr. Sparsh Mittal
 - **College**: IIT Roorkee
+- 2nd position (Indian division)
 
 ## Repository Structure
 
